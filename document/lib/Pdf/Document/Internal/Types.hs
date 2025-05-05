@@ -8,6 +8,7 @@ module Pdf.Document.Internal.Types
   Document(..),
   Catalog(..),
   Info(..),
+  Form(..),
   PageNode(..),
   Page(..),
   PageTree(..),
@@ -34,6 +35,9 @@ data Catalog = Catalog Pdf Ref Dict
 
 -- | Information dictionary
 data Info = Info Pdf Ref Dict
+
+-- | Interactive form dictionary
+data Form = Form Pdf Dict
 
 -- | Page tree node, contains pages or other nodes
 data PageNode = PageNode Pdf Ref Dict
