@@ -9,6 +9,8 @@ module Pdf.Document.Internal.Types
   Catalog(..),
   Info(..),
   Form(..),
+  Field(..),
+  FieldType(..),
   PageNode(..),
   Page(..),
   PageTree(..),
@@ -38,6 +40,13 @@ data Info = Info Pdf Ref Dict
 
 -- | Interactive form dictionary
 data Form = Form Pdf Dict
+
+-- | Field dictionary
+data Field = Field Pdf Ref Dict
+
+-- | Field type
+data FieldType = FTButton | FTText | FTChoice | FTSignature
+  deriving (Eq, Show)
 
 -- | Page tree node, contains pages or other nodes
 data PageNode = PageNode Pdf Ref Dict
